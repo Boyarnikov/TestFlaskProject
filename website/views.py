@@ -1,13 +1,14 @@
-from flask import Blueprint
+from flask import Blueprint, render_template
+
 
 views = Blueprint('views', __name__)
 
 
 @views.route('/')
 def home():
-    return "<H1> THIS IS MY HOME PAGE<H1>"
+    return render_template("home.html")
 
 
 @views.route('/notes')
 def notes():
-    return "<H1> THIS IS MY PAGE FOR MY NOTES<H1>"
+    return render_template("home.html")
