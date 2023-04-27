@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %} HOME {% endblock %}
+{% block header %} Домашняя страница сайта {% endblock %}
+{% block container %}
+<ul class="list-group list-group-flush" id="notes">
+    {% for note in user.notes %}
+    <li class="list-group-item">
+        {{note.text}}
+    </li>
+    {% endfor %}
+</ul>
+
+<form method="POST">
+    <textarea name="note" id="note" class="form-control"> </textarea>
+    <button type="submit" class="btn btn-primary"> Добавить запись </button>
+</form>
+{% endblock %}

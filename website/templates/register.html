@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %} REGISTER {% endblock %}
+{% block header %} Станица регистрации {% endblock %}
+{% block container %}
+<dev> {{error}} </dev>
+<form method="POST">
+    <h3 align="center">Register</h3>
+    <div class="form-group">
+        <label for="login">
+            <input
+                type="text",
+                class="form-control",
+                id="login"
+                name="login"
+                placeholder="Придумайте логин"
+            >
+        </label>
+        <label for="password">
+            <input
+                type="password",
+                class="form-control",
+                id="password"
+                name="password"
+                placeholder="Придумайте пароль"
+            >
+        </label>
+    </div>
+    <br />
+    <button type="Зарегестрироваться" class="btn btn-primary">Login</button>
+</form>
+{% endblock %}
